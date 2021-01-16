@@ -1,0 +1,17 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: dubbo-provider
+server:
+  port: 10101
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://192.168.56.105:8848
+  scan:
+    basePackages: com.hongpro.spring.cloud.alibaba.dubbo.provider.service
