@@ -34,3 +34,6 @@ management:
       exposure:
         include:
           - "*"
+
+user:
+  name: "小弟奥秘"

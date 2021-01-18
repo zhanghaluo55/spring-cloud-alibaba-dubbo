@@ -54,6 +54,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.hongpro</groupId>
             <artifactId>spring-cloud-alibaba-dubbo-api</artifactId>
             <version>${project.parent.version}</version>

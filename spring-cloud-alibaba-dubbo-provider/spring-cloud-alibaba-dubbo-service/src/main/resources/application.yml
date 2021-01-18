@@ -9,9 +9,11 @@ server:
 dubbo:
   protocol:
     name: dubbo
-    port: -1
+    port: 20883
     serialization: kryo
   registry:
     address: nacos://192.168.56.105:8848
   scan:
     basePackages: com.hongpro.spring.cloud.alibaba.dubbo.provider.service
+#  provider:
+#    loadbalance: roundrobin

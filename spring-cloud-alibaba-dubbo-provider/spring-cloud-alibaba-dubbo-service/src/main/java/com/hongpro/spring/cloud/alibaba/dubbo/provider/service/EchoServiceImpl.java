@@ -2,6 +2,7 @@ package com.hongpro.spring.cloud.alibaba.dubbo.provider.service;
 
 import com.hongpro.spiring.cloud.alibaba.dubbo.provider.EchoService;
 import org.apache.dubbo.config.annotation.Service;
+import org.springframework.beans.factory.annotation.Value;
 
 /**
  * TODO
@@ -11,8 +12,12 @@ import org.apache.dubbo.config.annotation.Service;
  */
 @Service(version = "1.0.0")
 public class EchoServiceImpl implements EchoService {
+
+    @Value("${dubbo.protocol.port}")
+    private String port;
+
     @Override
     public String echo(String string) {
-        return "Hellp Echo " + string;
+        return "Hellp Echo " + string + "; port: " + port;
     }
 }
